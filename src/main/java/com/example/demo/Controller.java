@@ -23,14 +23,19 @@ public class Controller {
         return bancoDeDados.listar();
     }
 
-    @PutMapping("/id")
-    public Agenda atualizar(@PathVariable Long id,@RequestBody String agenda){
+    @PutMapping("/{id}")
+    public Agenda atualizar(@PathVariable Long id, @RequestBody Agenda agenda){
         return bancoDeDados.atualizar(id, agenda);
     }
 
 
-    @DeleteMapping("/id")
-    public Agenda deletar(@PathVariable Long id){
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id){
         bancoDeDados.deletar(id);
+    }
+
+    @DeleteMapping
+    public void deletarTudo(){
+        bancoDeDados.deletarTudo();
     }
 }

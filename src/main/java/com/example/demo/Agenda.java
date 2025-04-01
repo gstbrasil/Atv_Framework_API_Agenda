@@ -27,7 +27,5 @@ public class Agenda {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-
-
     }
 }

@@ -39,7 +39,11 @@ public class BancoDeDados {
                 agenda = item;
                 break;
             }
-            agendas.remove(agenda);
+            agendas.deleteById(agenda);
         }
+    }
+
+    public void deletarTudo(){
+        agendas.clear();
     }
 }
