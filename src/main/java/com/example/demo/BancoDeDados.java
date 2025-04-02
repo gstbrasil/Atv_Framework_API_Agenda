@@ -19,10 +19,8 @@ public class BancoDeDados {
     }
 
     public Agenda atualizar(Long id, Agenda novoAgenda) {
-        Agenda agenda = null;
         for (Agenda item : agendas) {
             if (Objects.equals(item.getId(), id)) {
-                agenda = item;
                 item.setTitulo(novoAgenda.getTitulo());
                 item.setDescricao(novoAgenda.getDescricao());
                 break;
@@ -39,11 +37,7 @@ public class BancoDeDados {
                 agenda = item;
                 break;
             }
-            agendas.deleteById(agenda);
         }
-    }
-
-    public void deletarTudo(){
-        agendas.clear();
+        agendas.remove(agenda);
     }
 }

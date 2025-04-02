@@ -33,9 +33,4 @@ public class Controller {
     public void deletar(@PathVariable Long id){
         bancoDeDados.deletar(id);
     }
-
-    @DeleteMapping
-    public void deletarTudo(){
-        bancoDeDados.deletarTudo();
-    }
 }
